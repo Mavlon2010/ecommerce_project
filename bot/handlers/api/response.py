@@ -2,12 +2,14 @@ import json
 
 import requests
 
+from bot.app import WEB_URL
+
 
 class BotAPI:
     def __init__(self):
-        self.categories = 'http://127.0.0.1:8000/api/v1/category/'
-        self.subcategory = 'http://127.0.0.1:8000/api/v1/subcategory/'
-        self.products = 'http://127.0.0.1:8000/api/v1/product/'
+        self.categories = f'{WEB_URL}/api/v1/category/'
+        self.subcategory = f'{WEB_URL}/api/v1/subcategory/'
+        self.products = f'{WEB_URL}/api/v1/product/'
 
     def json_loads(self, url):
         return json.loads(requests.get(url).text)

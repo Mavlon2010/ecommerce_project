@@ -10,8 +10,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 TOKEN = getenv("BOT_TOKEN")
-PROVIDER_TOKEN = getenv("PROVIDER_TOKEN")
+ADMINS = getenv('ADMINS').split(',')
+PROVIDER_TOKEN = getenv('PROVIDER_TOKEN')
+WEB_URL = getenv('WEB_URL')
+
 
 dp = Dispatcher()
 
